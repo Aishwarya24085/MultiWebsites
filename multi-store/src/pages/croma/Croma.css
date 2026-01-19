@@ -1,0 +1,74 @@
+/* Layout */
+.croma-layout {
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Header */
+.croma-header {
+  height: 100px;
+  background: linear-gradient(90deg, #1c1c1c, #2b2b2b);
+  color: white;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.croma-logo {
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #5fd068;
+}
+
+/* Body */
+.croma-body {
+  display: flex;
+  height: calc(100vh - 100px);
+}
+
+/* Sidebar */
+.croma-sidebar {
+  width: 140px;
+  background-color: #252525;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.cr-side-link {
+  font-size: 16px;
+  color: #eaeaea;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.cr-side-link:hover {
+  background-color: #3a3a3a;
+  color: #5fd068;
+}
+
+/* Content */
+.croma-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f4f5f7;
+  overflow-y: auto;
+}
+
+/* Add Button */
+.cr-add-btn {
+  font-size: 30px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background-color: #5fd068;
+  color: #1c1c1c;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.35);
+}

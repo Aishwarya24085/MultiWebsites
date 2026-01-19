@@ -1,0 +1,39 @@
+.product-card {
+  background-color: white;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.product-title {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #111827;
+}
+
+.product-price {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #b12704;
+  margin-bottom: 6px;
+}
+
+.product-meta {
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 4px;
+}
+
+.product-rating {
+  color: #f59e0b;
+  font-size: 0.9rem;
+  margin-bottom: 6px;
+}
