@@ -9,6 +9,8 @@ const productSchema = new mongoose.Schema(
     discount: Number,
     seller: String,
     sellerRating: Number,
+    productUrl:String,
+    image:String
   },
   { timestamps: true }
 );
