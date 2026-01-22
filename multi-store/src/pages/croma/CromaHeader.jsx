@@ -1,0 +1,58 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './CromaHeader.css';
+
+const CromaHeader = () => {
+  return (
+    <header className="croma-navbar">
+      <div className="croma-nav-content">
+        {/* Logo and Menu Section */}
+        <div className="croma-nav-left">
+            <img 
+              src="https://upload.wikimedia.org/wikipedia/commons/d/d6/Croma_logo.png" 
+              alt="Croma" 
+              className="croma-logo"
+              height={60}
+            />
+          <div className="croma-menu-btn">
+            <span className="hamburger">☰</span>
+            <span className="menu-text">Menu</span>
+          </div>
+          <Link to="/croma/home" className="croma-nav-link">All</Link>
+        </div>
+
+        {/* Search Bar Section */}
+        <div className="croma-search-container">
+          <input 
+            type="text" 
+            placeholder="What are you looking for ?" 
+            className="croma-search-input"
+          />
+          {/* <button className="croma-search-btn"> */}
+            <img 
+              src="https://cdn-icons-png.flaticon.com/512/54/54481.png" 
+              alt="Croma" 
+              className="Croma-search"
+              height={20}
+            />
+        </div>
+
+        {/* Action Links Section */}
+        <div className="croma-nav-right">
+          <Link to="/croma/add" className="croma-seller-link">Become a Seller</Link>
+          
+          <button className="croma-login-btn">
+            <span className="user-icon">👤</span> Login
+          </button>
+
+          <div className="croma-cart">
+            <span className="cart-icon">🛒</span>
+            <span className="cart-badge">0</span>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+};
+
+export default CromaHeader;

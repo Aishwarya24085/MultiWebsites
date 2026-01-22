@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import ProductCard from "../../components/ProductCard";
+import ProductCard from "./AmazonProductCard";
+import "./AmazonHome.css"; // Import the new CSS file
 
 export default function AmazonHome() {
   const [products, setProducts] = useState([]);
@@ -11,7 +12,7 @@ export default function AmazonHome() {
   }, []);
 
   return (
-    <>
+    <div className="amazon-home-container">
       <h2>Amazon Products</h2>
 
       <div className="product-grid">
@@ -19,6 +20,6 @@ export default function AmazonHome() {
           <ProductCard key={p._id} product={p} />
         ))}
       </div>
-    </>
+    </div>
   );
 }

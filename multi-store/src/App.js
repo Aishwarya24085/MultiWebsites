@@ -20,21 +20,19 @@ function App() {
         <Route path="/" element={<MainHome />} />
 
         <Route path="/amazon" element={<AmazonMain />}>
-          <Route index element={
-            <p>Welcome to Amazon Dashboard. Manage your products easily.</p>
-          } />
+          <Route index element={<AmazonHome />} />
           <Route path="home" element={<AmazonHome />} />
           <Route path="add" element={<AmazonAdd />} />
         </Route>
 
         <Route path="/flipkart" element={<FlipkartMain />}>
-          <Route index element={<p>Welcome to Flipkart Dashboard</p>} />
+          <Route index element={<FlipkartHome />} />
           <Route path="home" element={<FlipkartHome />} />
           <Route path="add" element={<FlipkartAdd />} />
         </Route>
 
         <Route path="/croma" element={<CromaMain />}>
-          <Route index element={<p>Welcome to Croma Dashboard</p>} />
+          <Route index element={<CromaHome />} />
           <Route path="home" element={<CromaHome />} />
           <Route path="add" element={<CromaAdd />} />
         </Route>

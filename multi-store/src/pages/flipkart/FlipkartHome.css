@@ -1,0 +1,50 @@
+.fk-home-results-area {
+  background-color: #fff;
+  width: 100%;
+  min-height: 100vh;
+}
+
+
+.fk-main-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  color: #212121;
+}
+
+.fk-home-results-area {
+  background-color: #fff; /* Ensure the main background is white */
+}
+
+.fk-product-grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  /* 💡 Remove the background-color from here */
+  gap: 1px;
+  /* 💡 Add a background to individual children instead */
+  justify-content: start; 
+}
+
+/* Add a border-right to cards to simulate the grid lines */
+.fk-product-card {
+    border-right: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Ensure the cards stay white so the gray gap only shows as a line */
+.fk-product-grid-container > * {
+  background-color: #fff;
+  margin: 0; /* Remove any margins that might cause overlapping gaps */
+}
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .fk-product-grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .fk-product-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

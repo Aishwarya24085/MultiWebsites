@@ -1,7 +1,9 @@
 import { useState } from "react";
+import "./CromaAdd.css"
 
 export default function CromaAdd() {
   const [showForm, setShowForm] = useState(false);
+  const [image, setImage] = useState(null);
 
   const [product, setProduct] = useState({
     productName: "",
@@ -10,51 +12,112 @@ export default function CromaAdd() {
     rating: "",
     discount: "",
     seller: "",
-    sellerRating: ""
+    sellerRating: "", // Added field
+    productUrl: "",
+    noOfPeopleRated: ""
   });
 
   function handleChange(e) {
     setProduct({ ...product, [e.target.name]: e.target.value });
   }
 
+  function isFormValid() {
+    return Object.values(product).every(value => value !== "");
+  }
+
   async function handleSubmit(e) {
     e.preventDefault();
+    if (!isFormValid() || !image) {
+      alert("Please fill all fields and upload an image.");
+      return;
+    }
+
+    const formData = new FormData();
+    Object.keys(product).forEach(key => formData.append(key, product[key]));
+    formData.append("image", image);
 
     await fetch("http://localhost:7000/api/products/add", {
       method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(product)
+      body: formData
     });
 
-    alert("Product saved to database");
+    alert("Product saved to Croma database");
     setShowForm(false);
   }
 
   return (
-    <>
-      <h2>Uploads</h2>
-
-      <button className="fk-add-btn" onClick={() => setShowForm(true)}>+</button>
+    <div className="croma-add-container">
+      <div className="croma-add-header">
+        <h2>Seller Portal: Add New Inventory</h2>
+        <p>Upload product details to the Croma database</p>
+        {!showForm && (
+          <button className="croma-primary-btn" onClick={() => setShowForm(true)}>
+            + Create New Listing
+          </button>
+        )}
+      </div>
 
       {showForm && (
-        <div className="modal">
-          <form className="modal-form" onSubmit={handleSubmit}>
-            <h3>Add Product</h3>
+        <div className="croma-form-overlay">
+          <form className="croma-upload-form" onSubmit={handleSubmit}>
+            <h3>Product Specifications</h3>
+            
+            <div className="croma-grid-layout">
+              {/* Row 1: Full Name */}
+              <div className="input-group span-full">
+                <label>Product Name</label>
+                <input name="productName" placeholder="e.g. Apple iPhone 15 Pro" onChange={handleChange} required/>
+              </div>
 
-            <input name="productName" placeholder="Product Name" onChange={handleChange} />
-            <input name="price" placeholder="Price" onChange={handleChange} />
-            <input name="rating" placeholder="Rating" onChange={handleChange} />
-            <input name="discount" placeholder="Discount %" onChange={handleChange} />
-            <input name="seller" placeholder="Seller" onChange={handleChange} />
-            <input name="sellerRating" placeholder="Seller Rating" onChange={handleChange} />
+              {/* Row 2: Price and Discount */}
+              <div className="input-group span-3">
+                <label>Price (₹)</label>
+                <input name="price" type="number" placeholder="45000" onChange={handleChange} required/>
+              </div>
+              <div className="input-group span-3">
+                <label>Discount (%)</label>
+                <input name="discount" type="number" placeholder="10" onChange={handleChange} required/>
+              </div>
 
-            <div className="form-actions">
-              <button type="submit">Save</button>
-              <button type="button" onClick={() => setShowForm(false)}>Cancel</button>
+              {/* Row 3: Product Rating and People Rated */}
+              <div className="input-group span-3">
+                <label>Product Rating</label>
+                <input name="rating" type="number" step="0.1" placeholder="4.5" onChange={handleChange} required/>
+              </div>
+              <div className="input-group span-3">
+                <label>People Rated</label>
+                <input name="noOfPeopleRated" type="number" placeholder="1250" onChange={handleChange} required/>
+              </div>
+
+              {/* Row 4: Seller Info */}
+              <div className="input-group span-3">
+                <label>Seller Name</label>
+                <input name="seller" placeholder="Croma Retail" onChange={handleChange} required/>
+              </div>
+              <div className="input-group span-3">
+                <label>Seller Rating</label>
+                <input name="sellerRating" type="number" step="0.1" placeholder="4.2" onChange={handleChange} required/>
+              </div>
+
+              {/* Row 5: URL and Image */}
+              <div className="input-group span-full">
+                <label>Product URL</label>
+                <input name="productUrl" placeholder="https://www.croma.com/..." onChange={handleChange} required/>
+              </div>
+
+              <div className="input-group span-full">
+                <label>Product Image</label>
+                <input type="file" accept="image/*" className="file-input" onChange={(e) => setImage(e.target.files[0])} required />
+              </div>
+            </div>
+
+            <div className="croma-form-actions">
+              <button type="submit" className="SaveButton">List Product</button>
+              <button type="button" className="CancelButton" onClick={() => setShowForm(false)}>Discard</button>
             </div>
           </form>
         </div>
       )}
-    </>
+    </div>
   );
 }

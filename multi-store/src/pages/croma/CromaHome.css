@@ -1,0 +1,43 @@
+/* Container styling for the dark theme */
+.croma-home-container {
+  background-color: #000000; /* Deep black background */
+  min-height: 100vh;
+  padding: 20px 40px;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Header styling */
+.croma-home-header {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #353535;
+  padding-bottom: 15px;
+}
+
+.croma-home-header h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+}
+
+/* Grid alignment logic */
+.croma-product-grid {
+  display: grid;
+  /* Adjusts the number of columns based on screen width */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 30px; /* Space between product cards */
+  justify-items: center; /* Centers cards within their grid slot */
+  align-items: start;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .croma-home-container {
+    padding: 20px 15px;
+  }
+  
+  .croma-product-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+}

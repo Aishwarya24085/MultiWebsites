@@ -1,29 +1,17 @@
-import { Link, Outlet } from "react-router-dom";
+import {Outlet } from "react-router-dom";
+import FlipkartHeader from "./FlipkartHeader";
+import FlipkartSidebar from "./FlipkartSideBar";
 import "./Flipkart.css";
 
 export default function FlipkartMain() {
   return (
-    <div className="flipkart-layout">
-
-      {/* Header */}
-      <div className="flipkart-header">
-        <span className="flipkart-logo">Flipkart</span>
-      </div>
-
-      {/* Body */}
-      <div className="flipkart-body">
-
-        {/* Sidebar */}
-        <div className="flipkart-sidebar">
-          <Link to="/flipkart/home" className="fk-side-link">Home</Link>
-          <Link to="/flipkart/add" className="fk-side-link">Uploads</Link>
-        </div>
-
-        {/* Content */}
-        <div className="flipkart-content">
-          <Outlet />
-        </div>
-
+    <div className="flipkart-full-page">
+      <FlipkartHeader />
+      <div className="flipkart-content-wrapper">
+        <FlipkartSidebar />
+        <main className="flipkart-main-content">
+          <Outlet/>
+        </main>
       </div>
     </div>
   );

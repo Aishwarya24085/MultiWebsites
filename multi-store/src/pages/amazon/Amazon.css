@@ -1,10 +1,9 @@
-/* Layout */
+/* Layout
 .amazon-layout {
   height: 100vh;
   font-family: "Poppins", sans-serif;
 }
 
-/* Header */
 .amazon-header {
   height: 80px;
   background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
@@ -22,14 +21,12 @@
   letter-spacing: 1px;
 }
 
-/* Body */
 .amazon-body {
   display: flex;
   height: calc(100vh - 100px);
 }
 
 
-/* Sidebar */
 .amazon-sidebar {
   width: 120px;
   background-color: #232f3e;
@@ -45,14 +42,13 @@
   text-decoration: none;
   padding: 10px;
   border-radius: 6px;
-  /* background-color:#3a4a5e ; */
+  /* background-color:#3a4a5e ;
 }
 
 .side-link:hover {
   background-color: #384758;
 }
 
-/* Content */
 .amazon-content {
   flex: 1;
   padding: 20px;
@@ -60,14 +56,13 @@
   overflow-y: auto;
 }
 
-/* Products */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 15px;
 }
+*/
 
-/* Add Button */
 .add-btn {
   font-size: 30px;
   width: 55px;
@@ -79,7 +74,8 @@
   cursor: pointer;
 }
 
-/* Modal */
+
+
 .modal {
   position: fixed;
   top: 0;
@@ -133,4 +129,21 @@
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease, transform 0.2s ease;
+}
+ */
+
+ .amazon-full-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.amazon-content-wrapper {
+  display: flex; /* This puts sidebar and content side-by-side */
+  width: 100%;
+}
+
+.amazon-main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #fff;
 }

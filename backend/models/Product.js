@@ -10,7 +10,8 @@ const productSchema = new mongoose.Schema(
     seller: String,
     sellerRating: Number,
     productUrl:String,
-    image:String
+    image:String,
+    noOfPeopleRated: Number
   },
   { timestamps: true }
 );

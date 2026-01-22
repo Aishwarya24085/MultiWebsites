@@ -1,0 +1,130 @@
+.flipkart-navbar {
+  width: 100%;
+  font-family: Roboto, Arial, sans-serif;
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,.16);
+}
+
+/* MAIN BLUE NAV */
+.fk-nav-main {
+  background-color: #2874f0;
+  height: 56px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.fk-nav-content {
+  width: 100%;
+  max-width: 1248px;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  gap: 20px;
+}
+
+.fk-logo {
+  height: 40px;
+  cursor: pointer;
+}
+
+/* SEARCH BAR */
+.fk-search-container {
+  display: flex;
+  flex-grow: 1;
+  max-width: 560px;
+  background-color: #fff;
+  height: 36px;
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.23);
+}
+
+.fk-search-input {
+  flex-grow: 1;
+  border: none;
+  outline: none;
+  padding: 0 16px;
+  font-size: 14px;
+}
+
+.fk-search-btn {
+  background: none;
+  border: none;
+  color: #2874f0;
+  padding: 0 12px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* LINKS AND BUTTONS */
+.fk-nav-links {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  font-weight: 500;
+}
+
+.fk-login-btn {
+  background-color: #fff;
+  color: #2874f0;
+  border: 1px solid #dbdbdb;
+  padding: 5px 40px;
+  font-weight: 700;
+  cursor: pointer;
+  border-radius: 2px;
+  transition: box-shadow 0.2s;
+}
+
+.fk-nav-item {
+  cursor: pointer;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.fk-link{
+  color: white;
+  text-decoration: none;
+}
+/* SUB NAVIGATION BAR */
+.fk-nav-sub {
+  background-color: #fff;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #eee;
+}
+
+.fk-sub-content {
+  width: 100%;
+  max-width: 1248px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.fk-sub-content span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #212121;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.fk-sub-content span:hover {
+  color: #2874f0;
+}
+
+/* ICON UTILITIES */
+.arrow-down-small {
+  border: solid #212121;
+  border-width: 0 1.5px 1.5px 0;
+  display: inline-block;
+  padding: 2px;
+  transform: rotate(45deg);
+}

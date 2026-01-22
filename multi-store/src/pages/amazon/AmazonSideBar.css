@@ -1,0 +1,70 @@
+.amazon-sidebar {
+  width: 240px;
+  padding: 20px 15px;
+  background-color: #fff;
+  border-right: 1px solid #ddd;
+  min-height: calc(100vh - 100px);
+  font-family: Arial, sans-serif;
+}
+
+.filter-section {
+  margin-bottom: 25px;
+}
+
+.filter-section h3 {
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #0F1111;
+}
+
+.filter-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.filter-section ul li {
+  font-size: 13px;
+  color: #0F1111;
+  margin-bottom: 6px;
+  cursor: pointer;
+}
+
+.filter-section ul li:hover {
+  color: #c45500;
+}
+
+.filter-section label {
+  display: block;
+  font-size: 13px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.star-rating {
+  font-size: 13px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.price-input-range {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.price-input-range input {
+  width: 50px;
+  padding: 3px;
+  border: 1px solid #888;
+  border-radius: 3px;
+}
+
+.price-input-range button {
+  background: white;
+  border: 1px solid #888;
+  border-radius: 8px;
+  padding: 2px 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+}

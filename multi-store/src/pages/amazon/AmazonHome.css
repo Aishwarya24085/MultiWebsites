@@ -1,0 +1,36 @@
+/* Container for the entire Amazon Home results area */
+.amazon-home-container {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.amazon-home-container h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #0f1111;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* Grid Layout for Product Cards */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 12px;
+    align-items: stretch;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 1200px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+        gap: 8px;
+    }
+}

@@ -1,0 +1,144 @@
+.croma-card {
+  background-color: #191919;
+  color: white;
+  border-radius: 15px;
+  padding: 15px;
+  width: 100%;
+  max-width: 320px;
+  cursor: pointer;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: transform 0.2s;
+}
+
+.croma-card:hover {
+  transform: translateY(-5px);
+}
+
+.croma-image-wrapper {
+  background-color: #353535;
+  border-radius: 15px;
+  height: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-actions {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  z-index: 2;
+}
+
+.heart-icon {
+  background: rgba(0,0,0,0.3);
+  padding: 5px 8px;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+.compare-checkbox {
+  background: rgba(0,0,0,0.5);
+  padding: 4px 10px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+}
+
+.croma-main-img {
+  max-height: 85%;
+  max-width: 85%;
+  object-fit: contain;
+}
+
+.croma-info {
+  padding-top: 15px;
+}
+
+.croma-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  line-height: 1.4;
+  height: 44px;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.croma-rating-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.rating-pill {
+  color: #12daa8; /* Croma Teal */
+  font-weight: bold;
+}
+
+.review-count {
+  color: #9a9a9a;
+  font-size: 14px;
+}
+
+.croma-price-section {
+  margin-bottom: 15px;
+}
+
+.croma-current-price {
+  font-size: 24px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.croma-mrp {
+  font-size: 14px;
+  color: #9a9a9a;
+  text-decoration: line-through;
+  margin-right: 8px;
+}
+
+.savings-text {
+  font-size: 12px;
+  color: #9a9a9a;
+  margin-right: 8px;
+}
+
+.discount-pill {
+  border: 1px solid #4a4a4a;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  color: white;
+}
+
+.delivery-info {
+  font-size: 13px;
+  color: white;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.promo-badge {
+  background-color: #b2fceb;
+  color: black;
+  display: inline-block;
+  padding: 6px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}

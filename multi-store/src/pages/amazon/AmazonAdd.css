@@ -1,0 +1,127 @@
+.amz-add-container {
+  padding: 40px;
+  background-color: #f7f7f7;
+  min-height: 80vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.amz-add-header {
+  background: white;
+  padding: 24px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.amz-add-header h1 { font-size: 24px; margin-bottom: 8px; color: #111; }
+.amz-add-header p { color: #555; font-size: 14px; margin-bottom: 15px; }
+
+.amz-primary-btn {
+  background: #FFD814;
+  border: 1px solid #FCD200;
+  border-radius: 8px;
+  padding: 8px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(213,217,217,.5);
+}
+
+.amz-upload-form {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 30px;
+  max-width: 850px; /* Increased to fit 4 columns better */
+  margin: 0 auto;
+  border-radius: 4px;
+}
+
+.amz-form-section {
+  margin-bottom: 25px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.amz-form-section h3 {
+  font-size: 16px;
+  color: #c45500; /* Amazon's secondary orange */
+  margin-bottom: 15px;
+}
+
+/* New Grid Layouts */
+.amz-grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.amz-grid-4 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+.amz-input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+.amz-input-group label {
+  font-size: 13px;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #111;
+}
+
+.amz-input-group input {
+  padding: 10px; /* Increased slightly for better tap target */
+  border: 1px solid #888;
+  border-radius: 3px;
+  outline: none;
+  font-size: 14px;
+}
+
+.amz-input-group input:focus { 
+  border-color: #e77600; 
+  box-shadow: 0 0 3px 2px rgba(228,121,17,.5); 
+}
+
+.amz-file-input { 
+  background: #f0f2f2; 
+  border: 1px dashed #888 !important; 
+  padding: 20px !important;
+}
+
+.amz-form-actions { 
+  display: flex; 
+  gap: 15px; 
+  margin-top: 20px; 
+  border-top: 1px solid #eee;
+  padding-top: 20px;
+}
+
+.amz-save-btn {
+  background: #FFD814;
+  border: 1px solid #FCD200;
+  border-radius: 8px;
+  padding: 10px 30px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.amz-cancel-btn {
+  background: white;
+  border: 1px solid #D5D9D9;
+  border-radius: 8px;
+  padding: 10px 30px;
+  cursor: pointer;
+}
+
+.amz-cancel-btn:hover { background: #f7fafa; }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .amz-grid-2, .amz-grid-4 {
+    grid-template-columns: 1fr;
+  }
+}

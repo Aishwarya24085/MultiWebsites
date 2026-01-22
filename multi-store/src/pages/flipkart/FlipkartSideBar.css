@@ -1,0 +1,142 @@
+.fk-sidebar {
+  width: 280px;
+  background-color: #fff;
+  border-right: 1px solid #f0f0f0;
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,.08);
+  font-family: Roboto, Arial, sans-serif;
+  height: fit-content;
+}
+
+.fk-sidebar-header {
+  padding: 16px;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.fk-sidebar-header h2 {
+  font-size: 18px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.fk-filter-block {
+  padding: 16px;
+}
+
+.border-bottom {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.fk-filter-title {
+  font-size: 13px;
+  font-weight: 500;
+  margin: 0 0 12px 0;
+  color: #212121;
+  text-transform: uppercase;
+}
+
+/* Category Path */
+.fk-category-path {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 14px;
+}
+
+.fk-category-path span {
+  color: #878787;
+  cursor: pointer;
+}
+
+.fk-active-cat {
+  padding-left: 10px;
+  font-weight: 500;
+}
+
+/* Price Slider Mockup */
+.fk-slider-track {
+  height: 6px;
+  background: #e0e0e0;
+  position: relative;
+  margin: 20px 0;
+  border-radius: 3px;
+}
+
+.fk-slider-fill {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  height: 100%;
+  background: #2874f0;
+}
+
+.fk-slider-handle {
+  width: 13px;
+  height: 13px;
+  background: #fff;
+  border: 1px solid #bababa;
+  border-radius: 50%;
+  position: absolute;
+  top: -4px;
+  cursor: pointer;
+}
+
+.fk-slider-handle.left { left: 10%; }
+.fk-slider-handle.right { right: 10%; }
+
+.fk-price-dropdowns {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.fk-price-dropdowns select {
+  flex: 1;
+  padding: 4px;
+  border: 1px solid #e0e0e0;
+  font-size: 14px;
+}
+
+/* Flipkart Assured */
+.fk-assured {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.fk-assured img {
+  height: 21px;
+  margin-left: 10px;
+}
+
+/* Checkbox Styles */
+.fk-checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fk-checkbox-group label {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.fk-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow-down, .arrow-up {
+  border: solid #878787;
+  border-width: 0 1.5px 1.5px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.arrow-down { transform: rotate(45deg); }
+.arrow-up { transform: rotate(-135deg); }

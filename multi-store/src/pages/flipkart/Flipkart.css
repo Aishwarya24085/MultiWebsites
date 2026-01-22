@@ -1,10 +1,10 @@
 /* Layout */
+/*
 .flipkart-layout {
   height: 100vh;
   font-family: "Poppins", sans-serif;
 }
 
-/* Header */
 .flipkart-header {
   height: 100px;
   background: linear-gradient(90deg, #1f3c88, #3a6fd8);
@@ -21,13 +21,13 @@
   letter-spacing: 1px;
 }
 
-/* Body */
+
 .flipkart-body {
   display: flex;
   height: calc(100vh - 100px);
 }
 
-/* Sidebar */
+
 .flipkart-sidebar {
   width: 130px;
   background-color: #eef2f7;
@@ -51,7 +51,7 @@
   background-color: #dbe5ff;
 }
 
-/* Content */
+
 .flipkart-content {
   flex: 1;
   padding: 20px;
@@ -59,15 +59,57 @@
   overflow-y: auto;
 }
 
+*/
+
 /* Add Button */
 .fk-add-btn {
   font-size: 30px;
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  background-color: #f19034;
+  background-color:#2874f0;
   color: white;
   border: none;
   cursor: pointer;
   box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+}
+
+ .flipkart-full-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.flipkart-content-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.flipkart-main-content {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.SaveButton{
+  padding: 7px 10px;
+  background-color:#2874f0; 
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.CancelButton{
+  padding: 7px 10px;
+  background-color:#2874f0; 
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }

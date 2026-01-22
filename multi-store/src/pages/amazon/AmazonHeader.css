@@ -1,0 +1,186 @@
+.amazon-navbar-container {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 100%;
+}
+
+/* TOP NAVBAR */
+.nav-main {
+  background-color: #131921;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  color: white;
+  gap: 10px;
+}
+
+.nav-left { display: flex; align-items: center; gap: 15px; }
+
+.amazon-logo-text {
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 8px;
+  border: 1px solid transparent;
+}
+
+.nav-location {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px;
+  border: 1px solid transparent;
+}
+
+.location-text { display: flex; flex-direction: column; font-size: 12px; }
+.location-text .line-1 { color: #ccc; }
+.location-text .line-2 { font-weight: bold; font-size: 14px; }
+
+/* SEARCH BAR */
+.nav-fill { flex-grow: 1; }
+
+.nav-search-bar {
+  display: flex;
+  height: 40px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #febd69; /* Amazon Yellow */
+}
+
+.search-category {
+  background-color: #f3f3f3;
+  color: #555;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+  border-right: 1px solid #ccc;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.search-input {
+  flex-grow: 1;
+  border: none;
+  padding: 0 10px;
+  font-size: 15px;
+}
+
+.search-button {
+  background-color: #febd69;
+  border: none;
+  width: 45px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* RIGHT SECTION */
+.nav-right { display: flex; align-items: center; gap: 15px; }
+
+.nav-item { display: flex; flex-direction: column; cursor: pointer; }
+.nav-item .line-1 { font-size: 12px; }
+.nav-item .line-2 { font-size: 14px; font-weight: bold; }
+
+.nav-cart {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  left: 12px;
+  color: #f08804;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+/* BOTTOM NAVBAR */
+.nav-bottom {
+  background-color: #232f3e;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 15px;
+  color: white;
+  font-size: 14px;
+}
+
+.nav-links { display: flex; align-items: center; gap: 15px; }
+.nav-links span { cursor: pointer; padding: 8px; border: 1px solid transparent; }
+.nav-links span:hover { border: 1px solid white; }
+
+.nav-all { display: flex; align-items: center; gap: 5px; cursor: pointer; }
+
+.nav-promo {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.nav-promo strong { color: white; }
+
+.arrow-down-small {
+  border: solid #ccc;
+  border-width: 0 2px 2px 0;
+  display: inline-block;
+  padding: 2px;
+  transform: rotate(45deg);
+  margin-left: 5px;
+  margin-bottom: 3px;
+}
+
+/* REUSABLE HOVER EFFECT */
+.nav-left > div:hover, .nav-item:hover, .nav-cart:hover {
+  border: 1px solid white;
+}
+
+/* Container for the nav links in the bottom bar */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Tight gap like the real site */
+  height: 100%;
+}
+
+/* Base style for all links (All, Sell, Electronics, etc.) */
+.nav-link-item, .highlight-link, .nav-links span {
+  display: flex;
+  align-items: center;
+  padding: 8px 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  border: 1px solid transparent; /* Prevents layout jump on hover */
+  cursor: pointer;
+  height: 28px;
+  transition: border 0.1s;
+}
+
+/* Hover effect: White border appears around the item */
+.highlight-link:hover, .nav-links span:hover {
+  border: 1px solid white;
+  border-radius: 2px;
+}
+
+/* Specific styling for the 'All' hamburger menu */
+.nav-all {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.nav-all .hamburger {
+  font-size: 18px;
+  margin-top: -2px;
+}
+
+.nav-all strong {
+  font-weight: 700;
+}
+
+/* Specific styling for the 'Sell' link */
+.highlight-link {
+  font-weight: 500;
+}
