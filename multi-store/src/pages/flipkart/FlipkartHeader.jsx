@@ -62,10 +62,10 @@ const FlipkartHeader = () => {
           <Link to="/flipkart/home" className='fk-link'>
               <span>All</span>
           </Link>
-          <span>Electronics <i className="arrow-down-small"></i></span>
+          <Link className="fk-side-links" to="/flipkart/category/Electronics">Electronics</Link>
+          <Link className="fk-side-links" to="/flipkart/category/Fashion">Fashion</Link>
+          <Link className="fk-side-links" to="/flipkart/category/Beauty">Beauty & Care</Link>
           <span>TVs & Appliances <i className="arrow-down-small"></i></span>
-          <span>Men <i className="arrow-down-small"></i></span>
-          <span>Women <i className="arrow-down-small"></i></span>
           <span>Home & Furniture <i className="arrow-down-small"></i></span>
           <span>Sports, Books & More <i className="arrow-down-small"></i></span>
           <span>Flights</span>

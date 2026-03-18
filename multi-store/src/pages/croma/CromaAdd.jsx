@@ -14,7 +14,8 @@ export default function CromaAdd() {
     seller: "",
     sellerRating: "", // Added field
     productUrl: "",
-    noOfPeopleRated: ""
+    noOfPeopleRated: "",
+    productCategory: ""
   });
 
   function handleChange(e) {
@@ -69,7 +70,7 @@ export default function CromaAdd() {
                 <input name="productName" placeholder="e.g. Apple iPhone 15 Pro" onChange={handleChange} required/>
               </div>
 
-              {/* Row 2: Price and Discount */}
+              {/* Row 2: Price Discount and category */}
               <div className="input-group span-3">
                 <label>Price (₹)</label>
                 <input name="price" type="number" placeholder="45000" onChange={handleChange} required/>
@@ -77,6 +78,10 @@ export default function CromaAdd() {
               <div className="input-group span-3">
                 <label>Discount (%)</label>
                 <input name="discount" type="number" placeholder="10" onChange={handleChange} required/>
+              </div>
+              <div className="input-group span-3">
+                <label>Category</label>
+                <input name="productCategory" placeholder="Electornics" onChange={handleChange} required/>
               </div>
 
               {/* Row 3: Product Rating and People Rated */}

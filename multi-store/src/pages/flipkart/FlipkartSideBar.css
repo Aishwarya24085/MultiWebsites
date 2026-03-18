@@ -10,6 +10,7 @@
 .fk-sidebar-header {
   padding: 16px;
   border-bottom: 1px solid #f0f0f0;
+  background-color: #fff;
 }
 
 .fk-sidebar-header h2 {

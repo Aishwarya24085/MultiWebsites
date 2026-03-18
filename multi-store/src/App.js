@@ -4,10 +4,12 @@ import MainHome from "./pages/MainHome.jsx";
 import AmazonMain from "./pages/amazon/AmazonMain";
 import AmazonHome from "./pages/amazon/AmazonHome";
 import AmazonAdd from "./pages/amazon/AmazonAdd";
+import AmazonCategoryPage from "./pages/amazon/AmazonCategoryPage.jsx";
 
 import FlipkartMain from "./pages/flipkart/FlipkartMain"
 import FlipkartHome from "./pages/flipkart/FlipkartHome";
 import FlipkartAdd from "./pages/flipkart/FlipkartAdd";
+import FlipkartCategoryPage from "./pages/flipkart/FlipkartCategoryPage.jsx";
 
 import CromaMain from "./pages/croma/CromaMain"
 import CromaHome from "./pages/croma/CromaHome";
@@ -23,12 +25,14 @@ function App() {
           <Route index element={<AmazonHome />} />
           <Route path="home" element={<AmazonHome />} />
           <Route path="add" element={<AmazonAdd />} />
+          <Route path="category/:category" element={<AmazonCategoryPage />} />
         </Route>
 
         <Route path="/flipkart" element={<FlipkartMain />}>
           <Route index element={<FlipkartHome />} />
           <Route path="home" element={<FlipkartHome />} />
           <Route path="add" element={<FlipkartAdd />} />
+          <Route path="category/:category" element={<FlipkartCategoryPage />} />
         </Route>
 
         <Route path="/croma" element={<CromaMain />}>
@@ -36,6 +40,8 @@ function App() {
           <Route path="home" element={<CromaHome />} />
           <Route path="add" element={<CromaAdd />} />
         </Route>
+
+        
       </Routes>
     </BrowserRouter>
   );

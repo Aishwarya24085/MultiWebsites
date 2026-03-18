@@ -72,12 +72,12 @@ const AmazonHeader = () => {
               <strong>All</strong>
             </div>
           </Link>
-          <span>Fashion</span>
-          <span>Electronics</span>
+          <Link className="nav-link-item" to="/amazon/category/Electronics">Electronics</Link>
+          <Link className="nav-link-item" to="/amazon/category/Fashion">Fashion</Link>
+          <Link className="nav-link-item" to="/amazon/category/Beauty">Beauty & Care</Link>
+          <span>Home & Furniture</span>
+          <span>Sports, Books & More </span>
           <span>Bestsellers</span>
-          <span>Today's Deals</span>
-          <span>Mobiles</span>
-          <span>New Releases</span>
           <Link to="/amazon/add" className="highlight-link">
             Sell
           </Link>

@@ -14,7 +14,8 @@ export default function FlipkartAdd() {
     seller: "",
     sellerRating: "", // Added to state
     productUrl: "",
-    noOfPeopleRated: ""
+    noOfPeopleRated: "",
+    productCategory:""
   });
 
   function handleChange(e) {
@@ -65,7 +66,7 @@ export default function FlipkartAdd() {
             <div className="fk-grid-layout">
               {/* Row 1: Full Width Title */}
               <div className="fk-form-group span-full">
-                <label>Product Title</label>
+                <label>Product Name</label>
                 <input name="productName" placeholder="e.g. Samsung Galaxy S23" onChange={handleChange} required/>
               </div>
 
@@ -77,6 +78,10 @@ export default function FlipkartAdd() {
               <div className="fk-form-group">
                 <label>Discount %</label>
                 <input name="discount" type="number" placeholder="10" onChange={handleChange} required/>
+              </div>
+              <div className="fk-form-group">
+                <label>Category </label>
+                <input name="productCategory" placeholder="Electronics" onChange={handleChange} required/>
               </div>
 
               {/* Row 3: Ratings and Seller Info (3 Columns) */}

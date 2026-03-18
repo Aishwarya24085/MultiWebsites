@@ -14,7 +14,8 @@ export default function AmazonAdd() {
     seller: "",
     sellerRating: "",
     productUrl: "",
-    noOfPeopleRated: ""
+    noOfPeopleRated: "",
+    productCategory:""
   });
 
   function handleChange(e) {
@@ -71,6 +72,10 @@ export default function AmazonAdd() {
                 <div className="amz-input-group">
                   <label>Product URL</label>
                   <input name="productUrl" placeholder="https://amazon.in/dp/..." onChange={handleChange} required />
+                </div>
+                <div className="amz-input-group">
+                  <label>Product Category</label>
+                  <input name="productcategory" placeholder="Electronics" onChange={handleChange} required />
                 </div>
               </div>
             </div>

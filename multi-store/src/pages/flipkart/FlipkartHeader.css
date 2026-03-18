@@ -88,6 +88,13 @@
   color: white;
   text-decoration: none;
 }
+
+.fk-side-links{
+    font-size: 14px;
+  font-weight: 500;
+  color: #212121;
+  text-decoration: none;
+}
 /* SUB NAVIGATION BAR */
 .fk-nav-sub {
   background-color: #fff;
@@ -106,7 +113,7 @@
   padding: 0 20px;
 }
 
-.fk-sub-content span {
+.fk-sub-content span{
   font-size: 14px;
   font-weight: 500;
   color: #212121;

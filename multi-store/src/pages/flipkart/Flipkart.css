@@ -77,6 +77,7 @@
  .flipkart-full-page {
   display: flex;
   flex-direction: column;
+  background-color: #fff;
 }
 
 .flipkart-content-wrapper {

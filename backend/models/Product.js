@@ -11,7 +11,8 @@ const productSchema = new mongoose.Schema(
     sellerRating: Number,
     productUrl:String,
     image:String,
-    noOfPeopleRated: Number
+    noOfPeopleRated: Number,
+    productCategory: String
   },
   { timestamps: true }
 );
