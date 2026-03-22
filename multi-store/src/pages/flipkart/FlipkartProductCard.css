@@ -1,6 +1,7 @@
 .fk-product-card {
   background: #fff;
-  width: 100%; /* Ensure it takes full width of the grid cell */
+  width: 100%;
+  max-width:320px;/* Ensure it takes full width of the grid cell */
   /* Remove max-width: 280px; 💡 This was causing the alignment/overlap issue */
   padding: 16px;
   position: relative;
