@@ -1,8 +1,12 @@
 import React from 'react';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import './FlipkartHeader.css';
 import { Link } from 'react-router-dom';
 
 const FlipkartHeader = () => {
+  const [searchText, setSearchText] = useState("");
+  const navigate = useNavigate();
   return (
     <header className="flipkart-navbar">
       {/* Primary Blue Navbar */}
@@ -23,8 +27,25 @@ const FlipkartHeader = () => {
               type="text" 
               placeholder="Search for products, brands and more" 
               className="fk-search-input"
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  navigate(`/flipkart/search?q=${searchText}`);
+                  setSearchText("");
+                }
+              }}
             />
-            <button className="fk-search-btn">
+
+
+            <button className="fk-search-btn"
+                onClick={() => {
+                if (searchText.trim()) {
+                  navigate(`/flipkart/search?q=${searchText}`);
+                }
+                setSearchText("");
+              }}
+            >
                 <img 
               src="https://cdn-icons-png.flaticon.com/512/10629/10629681.png" 
               alt="FlipkartSearchIcon" 

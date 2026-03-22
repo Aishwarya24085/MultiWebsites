@@ -1,0 +1,25 @@
+search-page{
+    background-color: #000000; /* Deep black background */
+    min-height: 100vh;
+    padding: 20px 40px;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+no-res-found{
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+    color: white;
+}
+res-found{
+margin-bottom: 30px;
+  border-bottom: 1px solid #353535;
+  padding-bottom: 15px;
+}
+res-found h2{
+      font-size: 24px;
+  font-weight: 600;
+  margin: 0;
+  color:white;
+}

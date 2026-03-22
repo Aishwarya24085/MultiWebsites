@@ -1,8 +1,13 @@
 import React from 'react';
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import './AmazonHeader.css';
 import { Link } from "react-router-dom";
 
 const AmazonHeader = () => {
+  const [searchText, setSearchText] = useState("");
+  const navigate = useNavigate();
+
   return (
     <header className="amazon-navbar-container">
       {/* Top Main Navbar */}
@@ -30,13 +35,29 @@ const AmazonHeader = () => {
               type="text" 
               placeholder="Search Amazon.in" 
               className="search-input"
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  navigate(`/amazon/search?q=${searchText}`);
+                  setSearchText("");
+                }
+              }}
             />
-            <button className="search-button">
+            <button 
+              className="search-button"
+              onClick={() => {
+                if (searchText.trim()) {
+                  navigate(`/amazon/search?q=${searchText}`);
+                }
+                setSearchText("");
+              }}
+            >
               <img 
-              src="https://cdn-icons-png.flaticon.com/512/54/54481.png" 
-              alt="AmazonSearchIcon" 
-              height={20}
-            />
+                src="https://cdn-icons-png.flaticon.com/512/54/54481.png" 
+                alt="AmazonSearchIcon" 
+                height={20}
+              />
             </button>
           </div>
         </div>

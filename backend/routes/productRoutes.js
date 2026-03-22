@@ -38,4 +38,20 @@ router.get("/:platform", async (req, res) => {
   }
 });
 
+// 🔍 Search Products
+router.post("/search", async (req, res) => {
+  try {
+    const { searchText, platform } = req.body;
+
+    const products = await Product.find({
+      productName: { $regex: searchText, $options: "i" },
+      platformName: platform
+    });
+
+    res.json({ products });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+});
+
 module.exports = router;
